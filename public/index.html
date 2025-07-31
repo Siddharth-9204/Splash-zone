@@ -15,10 +15,13 @@
       <a href="#book">Book</a>
       <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
     </nav>
     <button id="theme-toggle">🌙</button>
   </header>
 
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h2>Make a Splash This Summer!</h2>
@@ -26,6 +29,7 @@
     </div>
   </section>
 
+  <!-- Attractions -->
   <section id="attractions" class="attractions">
     <h2>Our Attractions</h2>
     <div class="attraction-grid">
@@ -44,6 +48,7 @@
     </div>
   </section>
 
+  <!-- Booking -->
   <section id="book" class="book">
     <h2>Book Your Visit</h2>
     <form id="booking-form">
@@ -79,6 +84,7 @@
     <div id="booking-result"></div>
   </section>
 
+  <!-- Testimonials -->
   <section id="testimonials" class="testimonials">
     <h2>What Visitors Say</h2>
     <div class="carousel">
@@ -97,6 +103,7 @@
     </div>
   </section>
 
+  <!-- Stats -->
   <section class="stats">
     <h2>Our Impact</h2>
     <div class="stats-grid">
@@ -106,11 +113,51 @@
     </div>
   </section>
 
+  <!-- Login -->
+  <section id="login" class="auth-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="login-email">Email
+        <input type="email" id="login-email" name="email" required />
+      </label>
+
+      <label for="login-password">Password
+        <input type="password" id="login-password" name="password" required />
+      </label>
+
+      <button type="submit">Login</button>
+    </form>
+    <div id="login-result"></div>
+  </section>
+
+  <!-- Register -->
+  <section id="register" class="auth-section">
+    <h2>Register</h2>
+    <form id="register-form">
+      <label for="register-name">Name
+        <input type="text" id="register-name" name="name" required />
+      </label>
+
+      <label for="register-email">Email
+        <input type="email" id="register-email" name="email" required />
+      </label>
+
+      <label for="register-password">Password
+        <input type="password" id="register-password" name="password" required />
+      </label>
+
+      <button type="submit">Register</button>
+    </form>
+    <div id="register-result"></div>
+  </section>
+
+  <!-- Footer -->
   <footer id="contact">
     <p>Contact us at <a href="mailto:info@splashzone.com">info@splashzone.com</a></p>
     <p>&copy; 2025 Splash Zone</p>
   </footer>
 
+  <!-- Back to top -->
   <button id="backToTop">↑ Top</button>
 
   <script src="script.js"></script>

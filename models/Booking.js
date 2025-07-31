@@ -1,15 +1,13 @@
 const mongoose = require("mongoose");
 
-const bookingSchema = new mongoose.Schema({
-  name: { type: String, required: true, trim: true },
-  email: {
-    type: String,
-    required: true,
-    trim: true,
-    match: [/.+\@.+\..+/, "Please enter a valid email"],
+const BookingSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  date: Date,
+  createdAt: {
+    type: Date,
+    default: Date.now,
   },
-  date: { type: Date, required: true },
-  createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Booking", bookingSchema);
+module.exports = mongoose.model("Booking", BookingSchema);

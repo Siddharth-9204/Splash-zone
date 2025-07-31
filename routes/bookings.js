@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Booking = require("../models/booking");
+
+// ✅ Use the single shared Booking model
+const Booking = require("../models/Booking");
 
 // POST /api/bookings
 router.post("/", async (req, res) => {
@@ -16,7 +18,7 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({ success: true, message: "Booking successful!" });
   } catch (err) {
-    console.error("Booking error:", err);
+    console.error("Booking creation error:", err);
     res.status(500).json({ success: false, message: "Server error" });
   }
 });
@@ -27,7 +29,7 @@ router.get("/", async (req, res) => {
     const bookings = await Booking.find().sort({ createdAt: -1 });
     res.json({ success: true, data: bookings });
   } catch (err) {
-    console.error("Fetch error:", err);
+    console.error("Booking fetch error:", err);
     res.status(500).json({ success: false, message: "Server error" });
   }
 });
